@@ -68,13 +68,13 @@ graph TD
     classDef ai fill:#6c5ce7,stroke:#a29bfe,stroke-width:2px,color:#fff;
     classDef db fill:#00b894,stroke:#55efc4,stroke-width:2px,color:#fff;
 
-    A[📄 User Uploads File <br> <i>CSV, JSON, Excel</i>]:::user --> B(⚙️ Pandas Engine <br> <i>Normalizes Schema</i>):::user
-    B --> C[(🗄️ In-Memory SQLite <br> <i>Data Stored Locally</i>)]:::db
+    A["📄 User Uploads File <br> <i>CSV, JSON, Excel</i>"]:::user --> B("⚙️ Pandas Engine <br> <i>Normalizes Schema</i>"):::user
+    B --> C[("🗄️ In-Memory SQLite <br> <i>Data Stored Locally</i>")]:::db
     
-    D[🗣️ User Asks Question <br> <i>"Who sold the most?"</i>]:::user --> E{🧠 Gemini Flash API <br> <i>Translates to SQL</i>}:::ai
+    D["🗣️ User Asks Question <br> <i>'Who sold the most?'</i>"]:::user --> E{"🧠 Gemini Flash API <br> <i>Translates to SQL</i>"}:::ai
     E -->|Generated Query| C
     C -->|Query Results| E
-    E --> F[📊 Human-Readable Insight <br> <i>Streamlit UI</i>]:::user
+    E --> F["📊 Human-Readable Insight <br> <i>Streamlit UI</i>"]:::user
 ```
 
 </div>
