@@ -23,7 +23,7 @@
 
 **IntelliQuery** is a robust, Streamlit-based cognitive engine designed for Business Analysts and Data Professionals. Upload any structured dataset and query it effortlessly using conversational English. Under the hood, IntelliQuery leverages a highly-resilient REST architecture connected to the **Google Gemini API** to automatically translate your questions into highly accurate SQL queries, execute them, and return human-readable insights.
 
-> **Engineering Note:** This edition is strictly engineered for **Python 3.7 compatibility**. It replaces heavy, modern SDK dependencies with a lightweight, resilient REST architecture utilizing `requests`, complete with automatic retry logic for handling temporary API rate limits or network turbulence.
+> **Engineering Note:** This edition is strictly engineered for **Python 3.7 compatibility**. It replaces heavy, modern SDK dependencies with a lightweight REST architecture utilizing `requests`, making it incredibly fast and easy to deploy.
 
 ---
 
@@ -49,9 +49,9 @@
       <p>Raw SQL rows are confusing. IntelliQuery feeds the data back into the LLM to summarize the numbers into natural language insights.</p>
     </td>
     <td align="center">
-      <img src="https://img.icons8.com/nolan/64/shield.png" alt="Resilient"/>
-      <h3>Resilient Architecture</h3>
-      <p>Built-in geometric backoff and auto-retry mechanisms gracefully handle `429` rate limits and Google API downtime.</p>
+      <img src="https://img.icons8.com/nolan/64/speed.png" alt="Lightweight"/>
+      <h3>Lightweight Execution</h3>
+      <p>Uses an in-memory SQLite database and raw REST calls to eliminate heavy dependencies and ensure fast execution.</p>
     </td>
   </tr>
 </table>
