@@ -44,7 +44,7 @@
   </tr>
   <tr>
     <td align="center">
-      <img src="https://img.icons8.com/nolan/64/web-analytics.png" alt="Insights"/>
+      <img src="https://img.icons8.com/nolan/64/bar-chart.png" alt="Insights"/>
       <h3>Actionable Insights</h3>
       <p>Raw SQL rows are confusing. IntelliQuery feeds the data back into the LLM to summarize the numbers into natural language insights.</p>
     </td>
