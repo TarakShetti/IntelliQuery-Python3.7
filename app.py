@@ -81,25 +81,25 @@ if uploaded_file:
                 "SELECT name FROM sqlite_master WHERE type='table';", conn
             )
             if len(tables) == 0:
-                st.error("⚠️ No tables found in SQL file.")
+                st.error("No tables found in SQL file.")
                 st.stop()
 
             table_name = tables.iloc[0, 0]
             df = pd.read_sql_query(f"SELECT * FROM {table_name} LIMIT 1000", conn)
 
         else:
-            st.error("⚠️ Unsupported file format.")
+            st.error("Unsupported file format.")
             st.stop()
 
     except Exception as e:
-        st.error(f"❌ Failed to read file: {e}")
+        st.error(f"Failed to read file: {e}")
         st.stop()
 
     # ---------------------------
     # CLEAN DATA
     # ---------------------------
     if df.empty:
-        st.error("⚠️ Uploaded file is empty.")
+        st.error("Uploaded file is empty.")
         st.stop()
 
     df.columns = df.columns.str.replace(" ", "_")
@@ -128,7 +128,7 @@ Sample Rows:
 {sample_data}
 """
 
-    st.subheader("📌 Dataset Schema")
+    st.subheader("Dataset Schema")
     st.code(schema_context)
 
     # ---------------------------
